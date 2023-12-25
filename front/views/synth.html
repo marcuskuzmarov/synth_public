@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SYNTH</title>
+        <link rel="icon" type="image/png" href="imgs/STOPME.png" class="circular-favicon">
+        <link rel="stylesheet" type="text/css" href="css/synth.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </head>
+    <body>
+
+        <div id="welcome-page">
+            <h1>Welcome to <b>SYNTH</b></h1>
+            <button id="startSiteBtn">Click Me To Start!</button>
+        </div>
+
+        <div id="synth">
+            <div class="oscillator1">
+                <h3>OSCILLATOR 1</h3>
+                <ul class="waveforms">
+                    <li id="sine" class="waveforms">SINE</li>
+                    <li id="square" class="waveforms">SQUARE</li>
+                    <li id="sawtooth" class="waveforms">SAWTOOTH</li>
+                    <li id="triangle" class="waveforms">TRIANGLE</li>
+                    <li id="noise" class="waveforms">NOISE</li>
+                    <li id="custom" class="waveforms">CUSTOM</li>
+                </ul>
+            </div>
+    
+            <div class="controls">
+                <div class="adsr">
+                    <h3>ADSR</h3>
+                    <p>ATTACK</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="attack">
+                    <p>DECAY</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="decay">
+                    <p>SUSTAIN</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="sustain">
+                    <p>RELEASE</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="release">
+                </div>
+    
+                <div class="filter">
+                    <h3>FILTER</h3>
+                    <p>CUTOFF</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="cutoff">
+                    <p>Q</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="resonance">
+                </div>
+            </div>
+    
+            <div class="fx">
+                <div class="delay">
+                    <h3>DELAY</h3>
+                    <p>TIME</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="delayTime">
+                    <p>FEEDBACK</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="delayFeedback">
+                    <p>DRY/WET</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="delayMix">
+                    <p>CUTOFF</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="delayCutoff">
+                </div>
+    
+                <div class="reverb">
+                    <h3>REVERB</h3>
+                    <p>TIME</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="reverbTime">
+                    <p>DECAY</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="reverbDecay">
+                    <p>DRY/WET</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="reverbMix">
+                    <p>CUTOFF</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="reverbCutoff">
+                </div>
+    
+                <div class="drive">
+                    <h3>DRIVE</h3>
+                    <p>GAIN</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="driveGain">
+                    <p>DRY/WET</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="driveMix">
+                    <p>TONE</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="driveTone">
+                    <p>CUTOFF</p>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="driveCutoff">
+                </div>
+            </div>
+            <a href="/about">ABOUT THIS SITE</a>
+        </div>
+        <script defer type="module" src="script/synth.js"></script>
+    </body>
+</html>
